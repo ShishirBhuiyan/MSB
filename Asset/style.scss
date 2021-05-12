@@ -1,32 +1,7 @@
 @import'./component/variable';
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-	overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-#body{
-    height: 100vh !important;
-	background-image: url('./image/okk.jpg');
-	background-position: center;
-	-webkit-font-smoothing: antialiased;
-    width: 100%;
-}
-@import'./component/container';
-a,
-a:hover {
-	text-decoration: none !important;
-}
-
-ul{
-    list-style-type: none;
-}
-
+@import './component/master';
+@import './component/toggle';
+@import './component/nav';
 
 
 

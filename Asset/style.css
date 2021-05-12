@@ -25,6 +25,7 @@
           box-sizing: border-box;
 }
 
+/* ======== Global Start ========= */
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -38,14 +39,6 @@ html {
   width: 100%;
 }
 
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 a,
 a:hover {
   text-decoration: none !important;
@@ -55,6 +48,171 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ======== Global End ========= */
+/* ======== Hamburger Start ========= */
+.toggle {
+  position: fixed;
+  padding: 1.2rem .5rem;
+  top: 3%;
+  right: 10%;
+  z-index: 11;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+.toggle .line {
+  height: 3px;
+  width: 25px;
+  border-radius: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: red;
+  transition: .5s;
+}
+
+.toggle .line::before {
+  content: "";
+  width: 16px;
+  height: 3px;
+  position: absolute;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  background-color: var(--pink);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.toggle .line::after {
+  content: "";
+  height: 3px;
+  width: 16px;
+  right: 0;
+  position: absolute;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  background-color: var(--pink);
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.toggle .line.active {
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+  background-color: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.toggle .line.active::before {
+  -webkit-transform: rotate(45deg) translate(22px, -22px);
+          transform: rotate(45deg) translate(22px, -22px);
+}
+
+.toggle .line.active::after {
+  -webkit-transform: rotate(-45deg) translate(22px, 22px);
+          transform: rotate(-45deg) translate(22px, 22px);
+}
+
+/* ======== Hamburger End ========= */
+/*====== Header section Start =======*/
+header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 650ms;
+  transition: -webkit-transform 650ms;
+  transition: transform 650ms;
+  transition: transform 650ms, -webkit-transform 650ms;
+}
+
+header nav {
+  position: relative;
+  width: 90%;
+  background-color: var(--pink);
+  margin: 0 auto;
+  min-height: 100px;
+  padding: 15px 0;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav ul .nav__item {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 33.33%;
+}
+
+header nav ul .nav__item .nav__link {
+  cursor: pointer;
+  margin-bottom: 5x;
+}
+
+header nav ul .nav__item .nav__link .nav__icon {
+  font-size: 18px;
+  color: var(--black);
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+  margin-right: 5px;
+}
+
+header nav ul .nav__item .nav__link span {
+  color: var(--white);
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+header.open {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+/*====== Header section End =======*/
 @media screen and (min-width: 576px) {
   .container {
     max-width: 540px;
