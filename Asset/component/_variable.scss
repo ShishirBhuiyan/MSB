@@ -1,0 +1,25 @@
+:root{
+    --img_one: url("../image/okk.jpg"); // Black background
+    --imge_two: url("../image/s1.png"); // Shishir
+
+ 
+    --white: #fff;
+    --black:black;
+    --blue: #0257b1;
+    --indigo: #6610f2;
+    --pink: rgb(107, 0, 45);
+    --red: #d30015;
+    --pest: #08e6d3;
+    --gray: #343a40;
+
+
+    --rgb_one:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
+    --rgb_two:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
+
+    
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}

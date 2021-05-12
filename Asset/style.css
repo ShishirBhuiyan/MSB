@@ -1,0 +1,81 @@
+:root {
+  --img_one: url("../image/okk.jpg");
+  --imge_two: url("../image/s1.png");
+  --white: #fff;
+  --black:black;
+  --blue: #0257b1;
+  --indigo: #6610f2;
+  --pink: rgb(107, 0, 45);
+  --red: #d30015;
+  --pest: #08e6d3;
+  --gray: #343a40;
+  --rgb_one:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
+  --rgb_two:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#body {
+  height: 100vh !important;
+  background-image: url("./image/okk.jpg");
+  background-position: center;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

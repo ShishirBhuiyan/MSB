@@ -1,0 +1,47 @@
+@import'./component/variable';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+	overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#body{
+    height: 100vh !important;
+	background-image: url('./image/okk.jpg');
+	background-position: center;
+	-webkit-font-smoothing: antialiased;
+    width: 100%;
+}
+@import'./component/container';
+a,
+a:hover {
+	text-decoration: none !important;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+
+
+@media screen and(min-width:576px){
+   @include sm_container();
+}
+
+@media screen and(min-width: 768px){
+   @include md_container();
+}
+
+@media screen and(min-width: 992px){
+   @include lg_container();
+}
+
+@media screen and(min-width: 1200px){
+   @include xl_container();
+}
