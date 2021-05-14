@@ -1,0 +1,21 @@
+@import'./component/variable';
+@import './component/master';
+
+
+
+
+@media screen and(min-width:576px){ // --breakpoint-sm
+   @include sm_container();
+}
+
+@media screen and(min-width: 768px){ // --breakpoint-md
+   @include md_container();
+}
+
+@media screen and(min-width: 992px){ //  --breakpoint-lg
+   @include lg_container();
+}
+
+@media screen and(min-width: 1200px){ //  --breakpoint-xl
+   @include xl_container();
+}
