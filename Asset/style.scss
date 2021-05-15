@@ -1,11 +1,14 @@
 @import'./component/variable';
 @import './component/master';
+@import './component/toggle';
+@import './component/nav';
 
 
 
-
+/* Media Query Start */
 @media screen and(min-width:576px){ // --breakpoint-sm
    @include sm_container();
+   @include sm_toggle();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md
@@ -14,8 +17,11 @@
 
 @media screen and(min-width: 992px){ //  --breakpoint-lg
    @include lg_container();
+   @include lg_toggle();
 }
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
    @include xl_container();
+   @include xl_toggle();
 }
+/* Media Query End */
