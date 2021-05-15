@@ -212,6 +212,150 @@ header.open {
 }
 
 /*====== Header section End =======*/
+/*====== Profile Section Start =======*/
+.profile {
+  height: 50vh;
+  background: var(--blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 0;
+}
+
+.profile .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .top .avatar {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background-image: url("./image/s1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.profile .top .avatar a {
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  background-color: var(--blue);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.profile .top .avatar a span {
+  color: var(--pink);
+}
+
+.profile .top .introduce {
+  margin-top: 20px;
+}
+
+.profile .top .introduce h2 {
+  margin-top: 5px;
+  color: var(--white);
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profile .top .introduce h4 {
+  font-size: 14px;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  font-weight: 400;
+}
+
+.profile .top .introduce h4::before {
+  content: '';
+  height: 2px;
+  width: 100px;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(var(--pink)), to(var(--pest)));
+  background: linear-gradient(to right, var(--pink), var(--pest));
+}
+
+.profile .top .introduce h4::after {
+  content: '';
+  height: 2px;
+  width: 100px;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: -webkit-gradient(linear, left top, right top, from(var(--pest)), to(var(--pink)));
+  background: linear-gradient(to right, var(--pest), var(--pink));
+}
+
+.profile .top .introduce p {
+  display: none;
+  font-size: 16px;
+  color: var(--color2);
+}
+
+.profile .top .introduce p b {
+  font-weight: 400;
+}
+
+.profile .top .introduce .cd-headline.loading-bar .cd-words-wrapper::after {
+  background: -webkit-gradient(linear, left top, right top, from(var(--color1)), to(var(--pink)));
+  background: linear-gradient(to right, var(--color1), var(--pink));
+}
+
+.profile .bottom {
+  margin-top: 50px;
+  padding: 0 3rem;
+}
+
+.profile .bottom ul.contact {
+  list-style: none;
+  margin-bottom: 0rem;
+}
+
+.profile .bottom ul.contact li {
+  color: var(--white);
+  margin-bottom: .8rem;
+  font-size: 13px;
+}
+
+.profile .bottom ul.contact li i {
+  color: var(--dark-gray);
+  font-size: 18px;
+  margin-right: 0.3rem;
+}
+
 /* Media Query Start */
 @media screen and (min-width: 576px) {
   .container {
@@ -219,6 +363,12 @@ header.open {
   }
   .toggle {
     right: 15%;
+  }
+  .profile .bottom ul.contact {
+    margin-bottom: 1.6rem;
+  }
+  .profile .bottom ul.contact li {
+    font-size: 14px;
   }
 }
 
@@ -234,6 +384,52 @@ header.open {
   }
   .toggle {
     right: 16%;
+  }
+  .profile {
+    margin-bottom: 10px;
+    height: 30vh !important;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    padding: 25px 10px 20px 30px;
+  }
+  .profile .top {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-item-align: start !important;
+        align-self: flex-start !important;
+  }
+  .profile .top .avatar {
+    height: 125px;
+    width: 125px;
+  }
+  .profile .top .introduce {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .profile .top .introduce h4 {
+    text-align: left;
+    margin: 4px 0;
+  }
+  .profile .top .introduce h4::before {
+    display: none;
+  }
+  .profile .top .introduce h4::after {
+    display: none !important;
+  }
+  .profile .top .introduce p {
+    display: block;
   }
 }
 

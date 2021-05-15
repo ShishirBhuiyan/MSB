@@ -1,0 +1,157 @@
+
+/*====== Profile Section Start =======*/
+  .profile{
+    height:50vh;
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        .avatar{
+         height: 140px;
+         width: 140px;
+         border-radius: 50%;
+         background-image: url('./image/s1.png');
+         background-size:cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+         position: relative;
+         a{
+          position: absolute;
+          right: 8px;
+          bottom: 5px;
+          background-color: var(--blue);
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          span{
+           color: var(--pink);
+          }
+         }
+        }
+     
+        .introduce{
+          margin-top: 20px;
+         h2{
+           margin-top: 5px;
+          color: var(--white);
+          font-size: 25px;
+          font-weight: bold;
+          font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+         }
+         h4{
+           font-size: 14px;
+           color: var(--white);
+           text-align: center;
+           position: relative;
+           font-weight: 400;
+           &::before{
+             content: '';
+             height: 2px;
+             width: 100px;
+             position: absolute;
+             top: 24px;
+             left: 0;
+             background: linear-gradient(to right,var(--pink) , var(--pest));
+           }
+           &::after{
+             content: '';
+             height: 2px;
+             width: 100px;
+             position: absolute;
+             top: 24px;
+             right: 0;
+             background: linear-gradient(to right,var(--pest) , var(--pink));
+           }
+         }
+         p{
+           display: none;
+          font-size: 16px;
+          color: var(--color2);
+          b{
+           font-weight: 400;
+          }
+         }
+         .cd-headline.loading-bar .cd-words-wrapper::after{
+          background: linear-gradient(to right,var(--color1) , var(--pink));
+         }
+        }
+    }
+    .bottom{
+      margin-top: 50px;
+      padding: 0 3rem;
+     ul.contact{
+      list-style: none;
+      margin-bottom: 0rem;
+      li{
+       color: var(--white);
+       margin-bottom: .8rem;
+       font-size: 13px;
+       i{
+        color: var(--dark-gray);
+        font-size: 18px;
+        margin-right: 0.3rem;
+       }
+      }
+     }
+    }
+  }
+
+
+
+@mixin sm_profile {
+    .profile{
+        .bottom{
+         ul.contact{
+          margin-bottom: 1.6rem;
+          li{
+            font-size: 14px;
+          }
+         }
+        }
+    }
+}
+@mixin lg_profile {
+    .profile{
+        margin-bottom: 10px;
+        height: 30vh !important;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        padding: 25px 10px 20px 30px;
+          .top{
+            display: flex !important;
+            flex-direction: row;
+            align-self: flex-start !important;
+            .avatar{
+              height: 125px;
+              width: 125px;
+            }
+            .introduce{
+              margin-top: 0px;
+              margin-left: 20px;
+              h4{
+                text-align: left;  
+                margin:4px 0;          
+                &::before{
+                  display: none;
+                }
+                &::after{
+                  display: none !important;
+                }
+              }
+              p{
+                display: block;
+              }
+            }
+          }
+        }
+    }

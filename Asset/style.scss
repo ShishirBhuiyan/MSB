@@ -2,6 +2,8 @@
 @import './component/master';
 @import './component/toggle';
 @import './component/nav';
+@import './component/profile';
+
 
 
 
@@ -9,6 +11,7 @@
 @media screen and(min-width:576px){ // --breakpoint-sm
    @include sm_container();
    @include sm_toggle();
+   @include sm_profile();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md
@@ -18,6 +21,7 @@
 @media screen and(min-width: 992px){ //  --breakpoint-lg
    @include lg_container();
    @include lg_toggle();
+   @include lg_profile();
 }
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
