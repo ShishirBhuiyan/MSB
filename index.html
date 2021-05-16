@@ -26,13 +26,13 @@
             <nav>
                 <ul>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="#profile" class="nav__link">
                             <i class="nav__icon fas fa-home"></i>
                             <span>Profile</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="#about" class="nav__link">
                             <i class="nav__icon fas fa-user"></i>
                             <span>About</span>
                         </a>
@@ -70,9 +70,8 @@
     <!--====== Website Main Content =======-->
     <div class="container">
        <main>
-           
             <!--====== Profile Section Start =======-->
-            <section class="profile">
+            <section class="profile" id="profile">
                 <div class="top">
                     <div class="avatar">
                         <a href="Asset/cv/Shishir Bhuiyan.pdf" target="_blank"><span class="fas fa-cog fa-spin"></span></a>
@@ -94,6 +93,46 @@
                 </div>
             </section> 
             <!--====== Profile Section End =========-->
+
+
+            <!--====== About Section Start =======-->
+            <section class="about" id="about">
+                <div class="pop-overlay"></div>
+                <div class="section_heading">
+                    <div class="line first"></div>
+                    <h1>About Me!</h1>
+                    <div class="line second"></div>
+                </div>
+                <div class="wrapper">
+                    <div class="left">
+                        <h2>Who I Am ?</h2>
+                        <p>
+                        I’m Shishir <span style="font-size: 60px;">🏃🏾‍♂️</span>  and interested in doing positive things about every aspect of life. I love projects with challenges. I like works to make an impact in the real world. I always try to work for my world with my community. I learn to extended . Also I am a specialized in <span>Front-End and Back-End web Development</span>.🍁 <br />
+                        <br />
+                        </p>
+                        <button onclick="ReadMore()" class="button">Read More</button>
+
+                        <div id="popup">
+                            <div class="right"><div class="image"></div></div>
+                            <div class="left">
+                                <div class="text">
+                                <h2>A Few Words About Me......(●'◡'●)</h2>
+                                <p>
+                                    Besides within the web designing and development area every sector I want to deliver my best. I always try to maintain performance with achievements. Actually I am not a successful programmer but I want to be also successful. Because the program is my way & programming is my passion. If you think? I will help you with your project...🤝🏾 yes, I am ready to assist you InsyaAllah.
+                                </p>
+                                <div class="back">
+                                    <a href="#about" onclick="ReadMore()" id="readclosee" class="btn"><i class="fas fa-chevron-left"></i><span>Back</span></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right" data-aos="fade-left" data-aos-duration="3000">
+                        <div class="image"></div>
+                    </div>
+                </div>
+            </section>
+            <!--====== About Section End =======-->
        </main>
     </div>
 

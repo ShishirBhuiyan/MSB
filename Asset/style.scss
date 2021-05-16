@@ -3,7 +3,8 @@
 @import './component/toggle';
 @import './component/nav';
 @import './component/profile';
-
+@import './component/about';
+@import './component/read_more';
 
 
 @import './component/footer';
@@ -16,16 +17,21 @@
 
 @media screen and(min-width: 768px){ // --breakpoint-md
    @include md_container();
+   @include md-read-more();
+   @include md-about();
 }
 
 @media screen and(min-width: 992px){ //  --breakpoint-lg
    @include lg_container();
    @include lg_toggle();
    @include lg_profile();
+   @include lg_about();
+   @include lg-read-more();
 }
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
    @include xl_container();
    @include xl_toggle();
+   @include xl-read-more();
 }
 /* Media Query End */

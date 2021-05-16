@@ -24,5 +24,53 @@ ul{
     list-style-type: none;
 }
 
+
+section{
+	padding: 3rem;
+    background-color: var(--blue);
+    .section_heading{	
+        display: flex;
+        align-items: center;
+        h1{
+            font-size: 20px;
+            color: var(--white);
+            text-shadow: 0 0 1px var(--blue);
+            font-weight: 500;
+        }
+        .line{
+            position: relative;
+            height: 3px;
+            width: 35px;
+            background-color: var(--pink);
+        }
+        .line.first{
+            margin-right: 5px;
+            &::before{
+                content: '';
+                position: absolute;
+                height: 7px;
+                width: 7px;
+                left: -7px;
+                top: -2px;
+                background-color: var(--dark-gray);
+                border-radius: 50%;
+            }
+        }
+        .line.second{
+            margin-left: 5px;
+            &::after{
+                content: '';
+                position: absolute;
+                height: 7px;
+                width: 7px;
+                right: -7px;
+                top: -2px;
+                background-color: var(--dark-gray);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
 @import'./container';
 /* ======== Global End ========= */

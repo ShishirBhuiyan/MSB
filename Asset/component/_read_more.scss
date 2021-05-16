@@ -1,0 +1,143 @@
+
+#popup{
+ position:fixed;
+ top: 40%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ width: 90% !important;
+ padding: 0px 10px;
+ visibility: hidden;
+ opacity: 0;
+ transition: .5s;
+ z-index: 26;
+
+ display: flex;
+ flex-direction: column;
+  
+  
+ .left{
+  background-color: rgb(0, 0, 0);
+  .text{
+      h2{
+       color: var(--white);
+       align-self: flex-start;
+     }
+     p{
+       color: var(--gray);
+     }
+ 
+     .back{
+       position: absolute;
+       right: 6%;
+       a{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: all 650ms ease-in-out;
+         i{
+           font-size:18px;
+           transition: all 650ms ease-in-out;
+           color: var(--red);
+         }
+ 
+         span{
+           color: var(--white);
+           margin-left: 7px;
+           font-size: 16px;
+         }
+               
+        &:hover{
+          
+          i{
+           padding-right: 5px;
+          }
+          span{
+             padding-right: 0px;
+          }
+        }
+       }
+     }
+  }
+ 
+ }
+ .right{
+   height: 40vh;
+   width: 100%;
+   position: relative;
+   .image{
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    background-image: url('./image/s1.png');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+   }
+ }
+}
+
+
+
+
+#popup.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1 !important;
+  transition: .5s;
+}
+
+@mixin md-read-more(){
+#popup{
+  .left{
+    height: 40vh;
+    width: 70%;
+    margin: 0 auto;
+    .back{
+      right: 20% !important;
+    }
+  }
+  .right{
+    width: 70%;
+    margin: 0 auto;
+     height: 45vh !important;
+     .image{
+      background-size: cover !important;
+      height: 45vh !important;
+     }
+   }
+}
+}
+
+@mixin lg-read-more(){
+  #popup{
+    width: 80% !important;
+    flex-direction: row;
+    .left{
+      padding-top: 10px;
+      padding-left: 15px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: 40vh;
+      justify-content: space-evenly !important;
+      .back{
+        right: 10% !important;
+      }
+    }
+    .right{
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-top: 0vh;
+       height: 40vh !important;
+       .image{
+        background-size: cover !important;
+        height: 40vh !important;
+       }
+     }
+  }
+}
+
+@mixin xl-read-more(){
+  #popup{
+   width: 70% !important;
+  }
+}

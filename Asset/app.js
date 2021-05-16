@@ -9,6 +9,12 @@ $(document).ready(function() {
         $(".toggle .line").toggleClass("active");
          $("header").toggleClass("open");
     });
+    //<=========== Menu Click =============>
+    $(".nav__item").click(function() {
+        $(".toggle .line").toggleClass("active");
+         $("header").toggleClass("open");
+    });
+   
 
     //<=========== Ropples Effect =============>
     $(".profile").ripples({
@@ -25,4 +31,13 @@ $(document).ready(function() {
     });
 
 
+
+
+
 });
+
+//<=========== Read More =============>
+function ReadMore() {
+    $(".pop-overlay").toggleClass("openoverlay");
+    document.getElementById("popup").classList.toggle("active");
+}
