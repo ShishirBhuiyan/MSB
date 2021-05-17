@@ -14,6 +14,7 @@
   --color1:#5c86fd;
   --color2: #bdaacc;
   --color3: rgb(7, 16, 102);
+  --color4: #13203c;
   --rgb_one:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
   --rgb_two:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
 }
@@ -621,6 +622,193 @@ section.about .openoverlay {
   transition: .5s;
 }
 
+.skills .skillcontent {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.skills .skillcontent .left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 10px;
+}
+
+.skills .skillcontent .left .heading {
+  margin-bottom: 3rem !important;
+}
+
+.skills .skillcontent .left .heading i {
+  color: var(--gray);
+  font-size: 52px;
+}
+
+.skills .skillcontent .left .heading h5 {
+  font-size: 16px;
+  margin-top: 0.5rem;
+  color: var(--gray);
+}
+
+.skills .skillcontent .left .heading h5::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+  background-color: var(--color1);
+  margin: 4px 10px 4px 5px;
+}
+
+.skills .skillcontent .left .timeline_wrapper {
+  border-left: 2px dotted var(--gray);
+}
+
+.skills .skillcontent .left .timeline_wrapper .item {
+  padding-bottom: 2.6rem;
+  margin-left: 15px;
+  position: relative;
+}
+
+.skills .skillcontent .left .timeline_wrapper .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: -21px;
+  background-color: var(--color1);
+}
+
+.skills .skillcontent .left .timeline_wrapper .item p.year {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0px 30px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skillcontent .left .timeline_wrapper .item p {
+  font-size: 14px;
+  color: var(--skill-item-date-color);
+  line-height: 1.5;
+}
+
+.skills .skillcontent .left .timeline_wrapper .item p.center {
+  color: var(--skill-iten-center-color);
+}
+
+.skills .skillcontent .left .timeline_wrapper .item.last {
+  padding-bottom: 0 !important;
+}
+
+.skills .skillcontent .left .timeline_wrapper .item.last::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: -21px;
+  background-color: var(--color1);
+}
+
+.skills .skillcontent .right {
+  margin-top: 60px !important;
+  padding: 10px;
+}
+
+.skills .skillcontent .right .heading {
+  margin-bottom: 1.8rem;
+}
+
+.skills .skillcontent .right .heading i {
+  color: var(--gray);
+  font-size: 52px;
+}
+
+.skills .skillcontent .right .heading h5 {
+  font-size: 16px;
+  margin-top: 0.5rem;
+  color: var(--gray);
+}
+
+.skills .skillcontent .right .heading h5::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+  background-color: var(--color1);
+  margin: 4px 10px 4px 5px;
+}
+
+.skills .skillcontent .right .skills_wrapper {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.skills .skillcontent .right .skills_wrapper .skill-box {
+  margin-bottom: 4rem;
+}
+
+.skills .skillcontent .right .skills_wrapper .skill-box h4 {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.skills .skillcontent .right .skills_wrapper .skill-box .progress_wrap {
+  background-color: var(--color4);
+  height: 6px;
+  width: 100%;
+  border: 2px solid var(--color4);
+  -webkit-box-shadow: 0 0 1px 0.25px var(--color1);
+          box-shadow: 0 0 1px 0.25px var(--color1);
+  border-radius: 10px;
+  position: relative;
+}
+
+.skills .skillcontent .right .skills_wrapper .skill-box .progress_wrap .progress_bar {
+  display: block;
+  height: 100%;
+  background: var(--color1);
+  width: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.skills .skillcontent .right .skills_wrapper .skill-box .progress_wrap .progress_bar::after {
+  content: "";
+  height: 7px;
+  width: 7px;
+  background-color: var(--white);
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  top: -2.5px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.skills .skillcontent .right .skills_wrapper .skill-box .progress_wrap .progress_bar span.tooltips {
+  position: absolute;
+  right: -12px;
+  top: 13px;
+  margin-bottom: 10px;
+  color: var(--skill-progress-tooltip-color) !important;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
 /* Footer Start */
 footer {
   background: var(--blue);
@@ -793,6 +981,15 @@ footer span {
   #popup .right .image {
     background-size: cover !important;
     height: 40vh !important;
+  }
+  section.skills .skillcontent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  section.skills .skillcontent .right {
+    margin-top: 0px !important;
   }
 }
 

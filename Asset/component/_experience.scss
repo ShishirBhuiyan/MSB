@@ -1,0 +1,172 @@
+.skills{
+    .skillcontent{
+     margin-top: 30px;
+     padding: 10px;
+     .left{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+       .heading{
+        margin-bottom: 3rem !important;
+        i{
+         color: var(--gray);
+         font-size: 52px;
+        }
+        h5{
+         font-size: 16px;
+         margin-top: 0.5rem;
+         color:  var(--gray);
+         &::after{
+           content: "";
+          width: 50px;
+          height: 2px;
+          display: inline-block;
+          background-color: var(--color1);
+          margin: 4px 10px 4px 5px;
+         }
+        }
+       }
+       
+       .timeline_wrapper{
+        border-left: 2px dotted var(--gray);
+          .item{
+             padding-bottom: 2.6rem;
+             margin-left: 15px;
+             position: relative;
+             &::before{
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              margin-left: -21px;
+              background-color: var(--color1);
+             }
+                p.year{
+                 font-size: 16px;
+                 background: rgba(255, 255, 255, 0.15);
+                 padding: 0px 30px;
+                 display: inline-block;
+                 font-weight: 600;
+                 margin-bottom: 10px;
+                }
+                p{
+                 font-size: 14px;
+                 color: var(--skill-item-date-color);
+                 line-height: 1.5;
+                }
+                p.center{
+                 color: var(--skill-iten-center-color);
+                }
+          }
+          .item.last{
+            padding-bottom: 0 !important;
+           &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-left: -21px;
+            background-color: var(--color1);
+           }
+          }
+       }
+     }
+     .right{
+       margin-top: 60px !important;
+         padding: 10px;
+         .heading{
+            margin-bottom: 1.8rem;
+          i{
+           color: var(--gray);
+           font-size: 52px;
+          }
+          h5{
+           font-size: 16px;
+           margin-top: 0.5rem;
+           color:  var(--gray);
+            &::after{
+              content: "";
+             width:50px;
+             height: 2px;
+             display: inline-block;
+             background-color: var(--color1);
+             margin: 4px 10px 4px 5px;
+            }
+          }
+         }
+         .skills_wrapper{
+            align-self: center;
+            justify-self: center;
+            .skill-box {
+             margin-bottom: 4rem;
+             h4{
+              color: var(--white);
+              font-size: 14px;
+              font-weight: 500;
+              margin-bottom: 1rem;
+             }
+             .progress_wrap{
+               background-color: var(--color4);
+               height: 6px;
+               width: 100%;
+               border: 2px solid var(--color4);
+               box-shadow: 0 0 1px 0.25px var(--color1);
+               border-radius: 10px;
+               position: relative;
+               .progress_bar{
+                display: block;
+                height: 100%;
+                background: var(--color1);
+                width: 0;
+                transition: all 1s ease-in-out;
+                position: relative;
+                &::after{
+                  content: "";
+                  height:7px;
+                  width: 7px;
+                  background-color:  var(--white);
+                  border-radius: 50%;
+                 position: absolute;
+                 right: 0px;
+                 top: -2.5px;
+                 font-family: "Font Awesome 5 Free";
+                 font-weight: 900;
+                 font-size: 20px;
+                }
+        
+                span.tooltips{
+                 position: absolute;
+                 right: -12px;
+                 top: 13px;
+                 margin-bottom: 10px;
+                 color: var(--skill-progress-tooltip-color ) !important;
+                 font-size: 16px;
+                 text-transform: uppercase;
+                }
+               }
+             }
+            }
+         }
+     }
+   
+   
+    }
+   }
+   
+   @mixin lg-experence(){
+    section.skills{
+     .skillcontent{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .right{
+        margin-top: 0px !important;
+      }
+     }
+    }
+   }
