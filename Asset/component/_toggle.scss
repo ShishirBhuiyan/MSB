@@ -1,24 +1,28 @@
 
 /* ======== Hamburger Start ========= */
-.toggle{
-    position: fixed;
+.profile{
+    position: relative;
+    .toggle{
+    position: absolute;
     padding: 1.2rem .5rem;
-    top: 3%;
-    right: 10%;
-    z-index: 11;
+    top: 6%;
+    right: 5%;
+    z-index: var(--zindex_mid);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     transition: all 650ms;
+    background-color: var(--pink);
+    border-radius: 3px;
     .line{
         height: 3px;
         width: 25px;
         border-radius: 20px;
         transition: .5s;
         position: relative;
-        background-color: var(--dark-gray);
+        background-color: var(--white);
 
         &::before{
             content: ""; 
@@ -27,7 +31,7 @@
             left: 0;
             position: absolute;
             transform: translateY(-7px);
-            background-color: var(--dark-gray);
+            background-color: var(--white);
             transition:all 650ms;
         }
         &::after{
@@ -37,7 +41,7 @@
             width: 16px; 
             position: absolute;
             transform: translateY(7px);
-            background-color: var(--dark-gray);
+            background-color: var(--white);
             transition:all 650ms;
         }
     }
@@ -53,20 +57,14 @@
             transform: rotate(-45deg) translate(22px, 22px);
         }
     }
-}
-@mixin sm_toggle {
-    .toggle{
-        right: 15%;
     }
 }
 @mixin lg_toggle {
-    .toggle{
-        right: 16%;
-    }
-}
-@mixin xl_toggle {
-    .toggle{
-        right: 17%;
+    .profile{
+        .toggle{
+            top: 9%;
+            right: 4%;
+        }
     }
 }
 

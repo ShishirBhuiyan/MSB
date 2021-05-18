@@ -17,6 +17,10 @@
   --color4: #13203c;
   --rgb_one:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
   --rgb_two:rgba(0, 0, 0, 0) linear-gradient(to top, rgb(0, 4, 40), rgb(0, 4, 40)) repeat scroll 0% 0% !important;
+  --zindex_top:3;
+  --zindex_mid:2;
+  --zindex_low:1;
+  --zindex_none:0;
 }
 
 * {
@@ -116,13 +120,56 @@ section .section_heading .line.second::after {
 }
 
 /* ======== Global End ========= */
+.main {
+  position: relative;
+}
+
+.main #social {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  z-index: var(--zindex_low);
+}
+
+.main #social ul {
+  list-style: none;
+}
+
+.main #social ul li {
+  cursor: pointer;
+  margin: 5px 0;
+  background-color: var(--pink);
+  padding: 10px;
+  text-align: center;
+}
+
+.main #social ul li a {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+  color: white;
+}
+
+.main #social ul li a i {
+  font-size: 13px;
+}
+
+.main #social ul li:hover a {
+  color: palegoldenrod;
+}
+
 /* ======== Hamburger Start ========= */
-.toggle {
-  position: fixed;
+.profile {
+  position: relative;
+}
+
+.profile .toggle {
+  position: absolute;
   padding: 1.2rem .5rem;
-  top: 3%;
-  right: 10%;
-  z-index: 11;
+  top: 6%;
+  right: 5%;
+  z-index: var(--zindex_mid);
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,19 +183,21 @@ section .section_heading .line.second::after {
   overflow: hidden;
   -webkit-transition: all 650ms;
   transition: all 650ms;
+  background-color: var(--pink);
+  border-radius: 3px;
 }
 
-.toggle .line {
+.profile .toggle .line {
   height: 3px;
   width: 25px;
   border-radius: 20px;
   -webkit-transition: .5s;
   transition: .5s;
   position: relative;
-  background-color: var(--dark-gray);
+  background-color: var(--white);
 }
 
-.toggle .line::before {
+.profile .toggle .line::before {
   content: "";
   width: 16px;
   height: 3px;
@@ -156,12 +205,12 @@ section .section_heading .line.second::after {
   position: absolute;
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
-  background-color: var(--dark-gray);
+  background-color: var(--white);
   -webkit-transition: all 650ms;
   transition: all 650ms;
 }
 
-.toggle .line::after {
+.profile .toggle .line::after {
   content: "";
   right: 0;
   height: 3px;
@@ -169,12 +218,12 @@ section .section_heading .line.second::after {
   position: absolute;
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
-  background-color: var(--dark-gray);
+  background-color: var(--white);
   -webkit-transition: all 650ms;
   transition: all 650ms;
 }
 
-.toggle .line.active {
+.profile .toggle .line.active {
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
   background-color: transparent;
@@ -182,12 +231,12 @@ section .section_heading .line.second::after {
           box-shadow: unset;
 }
 
-.toggle .line.active::before {
+.profile .toggle .line.active::before {
   -webkit-transform: rotate(45deg) translate(22px, -22px);
           transform: rotate(45deg) translate(22px, -22px);
 }
 
-.toggle .line.active::after {
+.profile .toggle .line.active::after {
   -webkit-transform: rotate(-45deg) translate(22px, 22px);
           transform: rotate(-45deg) translate(22px, 22px);
 }
@@ -206,7 +255,7 @@ header {
   transition: -webkit-transform 650ms;
   transition: transform 650ms;
   transition: transform 650ms, -webkit-transform 650ms;
-  z-index: 22;
+  z-index: var(--zindex_low);
 }
 
 header nav {
@@ -513,7 +562,7 @@ section.about .pop-overlay {
           transform: scaleX(0);
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
-  z-index: 25;
+  z-index: var(--zindex_top);
 }
 
 section.about .openoverlay {
@@ -534,7 +583,7 @@ section.about .openoverlay {
   opacity: 0;
   -webkit-transition: .5s;
   transition: .5s;
-  z-index: 26;
+  z-index: var(--zindex_top);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -829,9 +878,6 @@ footer span {
   .container {
     max-width: 540px;
   }
-  .toggle {
-    right: 15%;
-  }
   .profile .bottom ul.contact {
     margin-bottom: 1.6rem;
   }
@@ -870,12 +916,17 @@ footer span {
   .container {
     max-width: 960px;
   }
-  .toggle {
-    right: 16%;
+  .main #social {
+    right: 97% !important;
+    top: 47%;
+  }
+  .profile .toggle {
+    top: 9%;
+    right: 4%;
   }
   .profile {
     margin-bottom: 10px;
-    height: 30vh !important;
+    height: 30vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
     -webkit-box-orient: horizontal !important;
@@ -996,9 +1047,6 @@ footer span {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
-  }
-  .toggle {
-    right: 17%;
   }
   #popup {
     width: 70% !important;

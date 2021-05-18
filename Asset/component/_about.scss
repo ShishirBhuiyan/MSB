@@ -77,7 +77,7 @@ section.about{
         background-repeat: no-repeat;
         transform: scaleX(0);
         transition: opacity 1s;
-        z-index: 25;
+        z-index: var(--zindex_top);
     }
     .openoverlay{
     transform: scaleX(1);

@@ -1,5 +1,6 @@
 @import'./component/variable';
 @import './component/master';
+@import './component/social';
 @import './component/toggle';
 @import './component/nav';
 @import './component/profile';
@@ -12,7 +13,6 @@
 /* Media Query Start */
 @media screen and(min-width:576px){ // --breakpoint-sm
    @include sm_container();
-   @include sm_toggle();
    @include sm_profile();
 }
 
@@ -24,6 +24,7 @@
 
 @media screen and(min-width: 992px){ //  --breakpoint-lg
    @include lg_container();
+   @include lg-social();
    @include lg_toggle();
    @include lg_profile();
    @include lg_about();
@@ -33,7 +34,6 @@
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
    @include xl_container();
-   @include xl_toggle();
    @include xl-read-more();
 }
 /* Media Query End */

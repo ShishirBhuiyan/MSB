@@ -9,7 +9,7 @@ header{
     margin: 0 auto ;
     transform: translateY(100%);
     transition: transform 650ms;
-    z-index: 22;
+    z-index: var(--zindex_low);
     nav{
         background-color: var(--pink);
         margin: 0 auto ;

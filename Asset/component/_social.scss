@@ -1,0 +1,42 @@
+
+.main{
+    position: relative;
+    #social{
+        position:absolute; 
+        top:15%; 
+        right:0;
+        z-index: var(--zindex_low);
+        ul{
+            list-style: none;
+            li{
+                cursor: pointer;
+                margin: 5px 0;
+                background-color: var(--pink);
+                padding: 10px;
+                text-align: center;
+                a{
+                    transform: scale(2);
+                    transition: all 650ms;
+                    color: white;
+                    i{
+                        font-size: 13px;
+                    }
+                }
+                &:hover{
+                    a{
+                        color: palegoldenrod;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin lg-social() {
+    .main{
+        #social{
+            right: 97% !important;
+            top: 47%;
+        } 
+    }  
+}

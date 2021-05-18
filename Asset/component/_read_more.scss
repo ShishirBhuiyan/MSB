@@ -9,7 +9,7 @@
  visibility: hidden;
  opacity: 0;
  transition: .5s;
- z-index: 26;
+ z-index: var(--zindex_top);
 
  display: flex;
  flex-direction: column;
