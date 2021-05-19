@@ -3,15 +3,28 @@ $(document).ready(function() {
     //<===========Animate on Scroll =============>
     AOS.init();
 
+    
+    //<=========== Hide & Show TopBottom =============>
+    $(window).scroll(function() {
+        $(this).scrollTop() > 60 ? $(".topbottom").fadeIn() : $(".topbottom").fadeOut();
+    });
+    
+    //<=========== TopBottom Click =============>
+    $(".topbottom").click(function(){
+        $("html, body").animate({
+            scrollTop: 0
+        }, 100);
+    });
+    
 
     //<=========== Hamburger Click =============>
-    $(".toggle").click(function() {
-        $(".toggle .line").toggleClass("active");
+    $(".menu").click(function() {
+        $(".menu .line").toggleClass("active");
          $("header").toggleClass("open");
     });
     //<=========== Menu Click =============>
     $(".nav__item").click(function() {
-        $(".toggle .line").toggleClass("active");
+        $(".menu .line").toggleClass("active");
          $("header").toggleClass("open");
     });
    

@@ -1,0 +1,47 @@
+.topbottom{
+    cursor: pointer;
+    position: fixed;
+    bottom: 8%;
+    right: 10%;
+    height: 40px;
+    width: 40px;
+    background-color:var(--pink);
+    border-radius: 4px;
+    z-index: var(--zindex_mid); 
+    &::before{
+      position: absolute;
+      content: "";
+      height:30px;
+      width: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      box-shadow: inset -1px -1px 3px rgba(255,255,255,0.1),
+                  inset 2px 2px 6px var(--blue);
+  
+    }
+    i{
+  
+     font-size: 18px;
+     transition: all .3s ;
+     margin-top: 10px;
+     margin-left: 12px;
+     color:var(--white);
+    }
+  
+  
+  }
+  
+  @mixin md-top-bottom(){
+    .topbottom{
+        right: 15%;
+        bottom: 1.5%;
+    }
+  }
+  
+  @mixin lg-top-bottom(){
+    .topbottom{
+        right: 17%;
+    }
+  
+  }

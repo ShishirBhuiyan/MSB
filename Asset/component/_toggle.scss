@@ -1,71 +1,85 @@
 
-/* ======== Hamburger Start ========= */
-.profile{
-    position: relative;
-    .toggle{
-    position: absolute;
+.menu {
     padding: 1.2rem .5rem;
-    top: 6%;
-    right: 5%;
-    z-index: var(--zindex_mid);
+    position: fixed;
+    top: 3%;
+    right: 10%;
+    background-color: var(--blue);
+    z-index: 11;
+    border-radius: 3px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     transition: all 650ms;
-    background-color: var(--pink);
-    border-radius: 3px;
-    .line{
-        height: 3px;
+  
+    .line,
+    .line:before,
+    .line:after{
+      height: 3px;
+      width: 25px;
+      border-radius: 20px;
+      transition: .5s;
+      position: relative;
+      background-color: var(--white);
+     }
+   
+     .line:before{
+      content: "";
+      width: 16px !important; 
+      position: absolute;
+      transform: translateY(-7px);
+      background-color: #ad1439 !important;
+     }
+   
+     .line:after{
+      content: "";
+      width: 16px !important; 
+      right: 0;
+      position: absolute;
+      transform: translateY(7px);
+      background-color: #ad1439 !important;
+     }
+   
+     .line.active{
+      transform: translateX(-30px);
+      background-color: transparent;
+      box-shadow: unset;
+     }
+   
+    .line.active:before{
+      transform: rotate(45deg) translate(22px, -22px);
+     }
+     .line.active:after{
+      transform: rotate(-45deg) translate(22px, 22px);
+     }
+     
+   }
+   
+  
+  @mixin md-hamburger(){
+    .menu {
+      padding: 1.5rem .8rem;
+      .line,
+      .line:before,
+      .line:after{
         width: 25px;
-        border-radius: 20px;
-        transition: .5s;
-        position: relative;
-        background-color: var(--white);
-
-        &::before{
-            content: ""; 
-            width: 16px;
-            height: 3px;
-            left: 0;
-            position: absolute;
-            transform: translateY(-7px);
-            background-color: var(--white);
-            transition:all 650ms;
-        }
-        &::after{
-            content: "";
-            right: 0;
-            height: 3px;
-            width: 16px; 
-            position: absolute;
-            transform: translateY(7px);
-            background-color: var(--white);
-            transition:all 650ms;
-        }
+      }
     }
-
-    .line.active{
-        transform: translateX(-30px);
-        background-color: transparent;
-        box-shadow: unset;
-        &::before{
-            transform: rotate(45deg) translate(22px, -22px);
-        }
-        &::after{
-            transform: rotate(-45deg) translate(22px, 22px);
-        }
+  }
+  
+  @mixin lg-hamburger() {
+    .menu{
+      right: 9% !important;
     }
+  }
+  
+  @mixin xl-hamburger() {
+    .menu{
+      right: 15% !important;
     }
-}
-@mixin lg_toggle {
-    .profile{
-        .toggle{
-            top: 9%;
-            right: 4%;
-        }
-    }
-}
-
-/* ======== Hamburger End ========= */
+  }
+  
+  
+  

@@ -2,6 +2,7 @@
 @import './component/master';
 @import './component/social';
 @import './component/toggle';
+@import './component/top_bottom';
 @import './component/nav';
 @import './component/profile';
 @import './component/about';
@@ -18,6 +19,8 @@
 
 @media screen and(min-width: 768px){ // --breakpoint-md
    @include md_container();
+   @include md-top-bottom();
+   @include md-hamburger();
    @include md-read-more();
    @include md-about();
 }
@@ -25,7 +28,8 @@
 @media screen and(min-width: 992px){ //  --breakpoint-lg
    @include lg_container();
    @include lg-social();
-   @include lg_toggle();
+   @include lg-social();
+   @include lg-hamburger();
    @include lg_profile();
    @include lg_about();
    @include lg-read-more();
@@ -34,6 +38,7 @@
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
    @include xl_container();
+   @include xl-hamburger();
    @include xl-read-more();
 }
 /* Media Query End */
