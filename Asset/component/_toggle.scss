@@ -5,7 +5,7 @@
     top: 3%;
     right: 10%;
     background-color: var(--blue);
-    z-index: 11;
+    z-index: var(--zindex_mid);
     border-radius: 3px;
     cursor: pointer;
     display: flex;

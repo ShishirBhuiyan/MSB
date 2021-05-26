@@ -3,7 +3,7 @@
     position: relative;
     #social{
         position:absolute; 
-        top:15%; 
+        top:10%; 
         right:0;
         z-index: var(--zindex_low);
         ul{
@@ -36,7 +36,14 @@
     .main{
         #social{
             right: 97% !important;
-            top: 47%;
+            top: 30%;
+        } 
+    }  
+}
+@mixin xl-social() {
+    .main{
+        #social{
+            top: 32%;
         } 
     }  
 }

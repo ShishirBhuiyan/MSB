@@ -9,9 +9,9 @@ header{
     margin: 0 auto ;
     transform: translateY(100%);
     transition: transform 650ms;
-    z-index: var(--zindex_low);
+    z-index: var(--zindex_mid);
     nav{
-        background-color: var(--pink);
+        background-color: var(--pink1);
         margin: 0 auto ;
         min-height: 100px;
         padding: 15px 0;
@@ -32,7 +32,7 @@ header{
                     margin-bottom: 5x;
                     .nav__icon{
                         font-size: 18px;
-                        color: var(--black);
+                        color: var(--dark-gray);
                         transition: all 650ms;
                         margin-right: 5px;
                     }

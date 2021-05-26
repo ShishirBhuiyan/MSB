@@ -8,6 +8,7 @@
 @import './component/about';
 @import './component/read_more';
 @import './component/experience';
+@import './component/portfolio';
 
 
 @import './component/footer';
@@ -15,6 +16,7 @@
 @media screen and(min-width:576px){ // --breakpoint-sm
    @include sm_container();
    @include sm_profile();
+   @include sm-portfolio();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md
@@ -23,22 +25,26 @@
    @include md-hamburger();
    @include md-read-more();
    @include md-about();
+   @include md-portfolio();
 }
 
 @media screen and(min-width: 992px){ //  --breakpoint-lg
    @include lg_container();
    @include lg-social();
-   @include lg-social();
    @include lg-hamburger();
+   @include lg-top-bottom();
    @include lg_profile();
    @include lg_about();
    @include lg-read-more();
    @include lg-experence();
+   @include lg-portfolio();
 }
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
    @include xl_container();
+   @include xl-social();
    @include xl-hamburger();
    @include xl-read-more();
+   @include xl-portfolio();
 }
 /* Media Query End */

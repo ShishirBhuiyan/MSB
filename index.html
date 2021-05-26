@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Asset/Plug/headline.css" />
     <link rel="stylesheet" href="Asset/Plug/all.min.css" />
     <link rel="stylesheet" href="Asset/Plug/aos.css" />
+    <link rel="stylesheet" href="Asset/Plug/venobox/venobox.css" />
 
     <!--========== Require Jquery Link ===========-->
     <script src="Asset/Plug/jquery.js"></script>
@@ -67,7 +68,7 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="#portfolios" class="nav__link">
                             <i class="nav__icon fas fa-project-diagram"></i>
                             <span>Portfolio</span>
                         </a>
@@ -164,7 +165,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right" data-aos="fade-left" data-aos-duration="3000">
+                    <div class="right" data-aos="zoom-in" data-aos-duration="2000">
                         <div class="image"></div>
                     </div>
                 </div>
@@ -242,6 +243,97 @@
                 </div>
             </section>
             <!--========== Education & Scills End =============-->
+
+
+            
+            <!--========== Portfolio Start ===========-->
+            <section class="portfolios" id="portfolios">
+                <div class="heading">
+                    <div class="section_heading">
+                        <div class="line first"></div>
+                          <i class="fas fa-paint-roller"></i>&nbsp;
+                          <h1>My works</h1>
+                        <div class="line second"></div>
+                    </div>
+                </div><br>
+                <div class="portfolio">
+                    <div class="tabs">
+                       <ul id="portfolio-flters">
+                          <li class="active"data-filter="*">
+                             <a href="#" >All</a>
+                          </li>
+             
+                          <li data-filter=".design">
+                             <a href="#" >UI/UX</a>
+                          </li>
+             
+                          <li data-filter=".web">
+                             <a href="#">Website</a>
+                          </li>
+             
+                          <li data-filter=".app">
+                             <a href="#">App</a>
+                          </li>
+                       </ul>
+                    </div>
+                    <div class="portfolio_wrapper">
+                        <div class="item design">
+                            <div class="portfolio-wrap">
+                                <img src="./Asset/image/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>App 1</h4>
+                                    <div class="portfolio-links">
+                                    <a href="./Asset/image/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="Project First"><i class="fas fa-plus"></i></a>
+                                    <a href="https://shishirbhuiyan.netlify.app" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="item web">
+                           <div class="portfolio-wrap">
+                               <img src="./Asset/image/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                               <div class="portfolio-info">
+                                   <h4>App 1</h4>
+                                   <div class="portfolio-links">
+                                   <a href="./Asset/image/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="fas fa-plus"></i></a>
+                                   <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="fas fa-link"></i></a>
+                                   </div>
+                               </div>
+                           </div>
+                      </div>
+                      <div class="item app">
+                          <div class="portfolio-wrap">
+                              <img src="./Asset/image/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                  <h4>App 1</h4>
+                                  <div class="portfolio-links">
+                                  <a href="./Asset/image/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="fas fa-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="fas fa-link"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                     </div>
+                     <div class="item design">
+                         <div class="portfolio-wrap">
+                             <img src="./Asset/image/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                             <div class="portfolio-info">
+                                 <h4>App 1</h4>
+                                 <div class="portfolio-links">
+                                 <a href="./Asset/image/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="fas fa-plus"></i></a>
+                                 <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="fas fa-link"></i></a>
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+                    </div>
+                 </div>
+            </section>
+            <!--========== Portfolio End =============-->
+
+
+            <section>
+                <div id="ok"></div>
+            </section>
        </main>
     </div>
 
@@ -261,5 +353,22 @@
     <script src="Asset/Plug/aos.js"></script>
     <script src="Asset/app.js"></script>
     <script src="Asset/Plug/jquery.ripples.min.js"></script>
+     <script src="Asset/Plug/isotope.js"></script>
+    <script src="Asset/Plug/venobox/venobox.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+         $.ajax({
+             url:"https://shishirbhuiyan.github.io/jsonfile/my.json",
+             type:"GET",
+             success: function(data){
+                 console.log(data);
+             }
+         });
+
+    })
+    </script>
+
+    
 </body>
 </html>

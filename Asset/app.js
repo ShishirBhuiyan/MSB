@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     //<===========Animate on Scroll =============>
     AOS.init();
 
@@ -44,8 +43,45 @@ $(document).ready(function() {
     });
 
 
+   //Image Filter-----------------
+   var wrappers = $('.portfolio_wrapper');
+   
+   wrappers.isotope({
+      filter : "*",
+      layoutMode : 'masonry',
+      animationOptions : {
+         duration : 750,
+         easing : 'linear'
+      }
+   });
 
+   let links = document.querySelectorAll('.tabs li');
 
+   links.forEach(link =>{
+      let selector = link.dataset.filter;
+      link.addEventListener('click', function(e){
+          e.preventDefault();
+          wrappers.isotope({
+            filter : selector,
+            layoutMode : 'masonry',
+            animationOptions : {
+               duration : 750,
+               easing : 'linear'
+            }
+         });
+      });
+   });
+
+   $('.tabs li').on('click', function() {
+    $(".tabs li").removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $(document).ready(function() {
+    $('.venobox').venobox({
+      'share': false
+    });
+  });
 
 });
 
