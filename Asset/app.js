@@ -77,7 +77,7 @@ $(document).ready(function() {
    var wrappers = $('.portfolio_wrapper');
    
    wrappers.isotope({
-      filter : "*",
+      filter : "web",
       layoutMode : 'masonry',
       animationOptions : {
          duration : 750,
