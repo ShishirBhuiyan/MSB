@@ -24,23 +24,23 @@ header{
             .nav__item{
                 padding: 15px 0;
                 display: flex;
-                align-items: center;
                 justify-content: center;
                 width:33.33%;
                 .nav__link{
+                    text-align: left;
                     cursor: pointer;
                     margin-bottom: 5x;
                     .nav__icon{
-                        font-size: 18px;
+                        font-size: 15px;
                         color: var(--dark-gray);
                         transition: all 650ms;
-                        margin-right: 5px;
+                        margin-right: 3px;
                     }
 
                     span{
                        color: var(--white);
                        text-transform: capitalize;
-                       font-size: 15px;
+                       font-size: 14px;
                     }
                 }
             }
@@ -49,6 +49,26 @@ header{
 }
 header.open{
     transform: translateY(0%);
+}
+
+@mixin md-nav() {
+    header{
+        nav{
+            ul{
+                .nav__item{
+                    .nav__link{
+                        .nav__icon{
+                            font-size: 20px;
+                        }
+    
+                        span{
+                           font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

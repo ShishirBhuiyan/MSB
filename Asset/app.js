@@ -5,7 +5,7 @@ $(document).ready(function() {
     
     //<=========== Hide & Show TopBottom =============>
     $(window).scroll(function() {
-        $(this).scrollTop() > 60 ? $(".topbottom").fadeIn() : $(".topbottom").fadeOut();
+        $(this).scrollTop() > 200 ? $(".topbottom").fadeIn() : $(".topbottom").fadeOut();
     });
     
     //<=========== TopBottom Click =============>

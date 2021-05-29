@@ -1,8 +1,10 @@
 section.about{
   padding-top: 4rem !important;
     .wrapper{
+      display: flex;
+      flex-direction: column;
         .left{
-            padding: 15px 15px 0 15px;
+            padding: 15px 0px 0 0px;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -14,14 +16,13 @@ section.about{
             margin-bottom: 1.6rem;
            }
            p{
-            color: var(--white);
             font-size: 16px;
             line-height: 2.2rem;
             letter-spacing: 0.1px;
             font-weight: 400;
             margin-bottom: 3rem;
             span{
-              color:var(--color1);
+              color:var(--pink);
               font-weight: 600;
             }
            }
@@ -48,18 +49,35 @@ section.about{
         }
         .right{
             position: relative;
-            height: 300px;
             width: 100%;
-            .image{
-              position: absolute;
-              height: 100%;
-              width: 100%;
-              top: 0;
-              left: 0;
-              background-image: url('./image/s1.png');
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0 0px 10px;
+            p{
+              line-height: 1.5;
+              font-size: 14px;
+              letter-spacing: 0.1px;
+              margin-bottom: 1rem;
+              position: relative;
+              .one{
+                font-size: 14px !important;
+                font-weight: bold;
+              }
+              .two{
+                position: absolute;
+                left: 90px;
+              }
+              &::before{
+                content: "";
+                top: 6px;
+                left: -22px;
+                height: 10px;
+                width: 10px;
+                border-top: 4px solid var(--pink);
+                border-right: 4px solid var(--pink);
+                position: absolute;
+                transform: rotate(45deg);
+              }
             }
           }
     }
@@ -68,7 +86,6 @@ section.about{
         top: 0;
         left: 0;
         min-height: 100vh !important;
-        background-image: url('./image/okk.jpg');
         background-position: center;
         -webkit-font-smoothing: antialiased;
         width: 100%;
@@ -85,13 +102,20 @@ section.about{
     }
        
 }
+@mixin sm-about {
+  section.about{
+    .wrapper{
+       .right{
+        padding: 10px 0 0px 30px;
+       }
+    }
+  }
+}
+
 @mixin md-about() {
     .content{
      .about{
        .wrapper{
-         .right{
-           height: 400px !important;
-         }
     }
     }
   }
@@ -103,7 +127,7 @@ section.about{
          flex-direction: row;
          padding: 0 !important;
         .left{
-           flex: 0 0 50%;
+          flex: 0 0 55%;
            p{
             margin-bottom: 2rem;
           }
@@ -111,11 +135,48 @@ section.about{
              margin-bottom: 2rem !important;
            }
          }
-         .right{
-           display: flex;
-           flex: 0 0 50%;
-         }
+        .right{
+          flex: 0 0 45%;
+          padding: 0px 0 0px 35px;
+          p{              
+            &::before{
+              left: -20px;
+            }
+          }
+        }
        }
     }
+}
+
+@mixin xl_about() {
+  section.about{
+    .wrapper{
+     .left{
+       flex: 0 0 45%;
+        p{
+         margin-bottom: 2rem;
+       }
+        .button{
+          margin-bottom: 2rem !important;
+        }
+      }
+     .right{
+       flex: 0 0 55%;
+       display: flex;
+       flex-direction: row;
+       padding: 35px 0 0px 65px;
+       p{  
+        line-height: 1.8;
+       }
+       .first{
+         flex: 0 0 50%;
+       }
+       .second{
+        padding-left: 20px;
+         flex: 0 0 50%;
+       }
+     }
+    }
+ }
 }
 

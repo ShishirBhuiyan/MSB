@@ -16,13 +16,15 @@
 @media screen and(min-width:576px){ // --breakpoint-sm
    @include sm_container();
    @include sm_profile();
+   @include sm-about();
+   @include sm-read-more();
    @include sm-portfolio();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md
    @include md_container();
-   @include md-top-bottom();
    @include md-hamburger();
+   @include md-nav();
    @include md-read-more();
    @include md-about();
    @include md-portfolio();
@@ -32,7 +34,6 @@
    @include lg_container();
    @include lg-social();
    @include lg-hamburger();
-   @include lg-top-bottom();
    @include lg_profile();
    @include lg_about();
    @include lg-read-more();
@@ -44,6 +45,7 @@
    @include xl_container();
    @include xl-social();
    @include xl-hamburger();
+   @include xl_about();
    @include xl-read-more();
    @include xl-portfolio();
 }
