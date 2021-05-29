@@ -121,8 +121,8 @@ $(document).ready(function() {
 
 //<=========== Read More =============>
 function ReadMore() {
-    document.getElementsByClassName("pop-overlay").toggleClass("openoverlay");
-    document.getElementById("popup").classList.toggle("active");
+    $(".pop-overlay").toggleClass("openoverlay");
+    $("#popup").classList.toggle("active");
 }
 
 
