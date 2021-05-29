@@ -1,4 +1,34 @@
 $(document).ready(function() {
+
+    //<=========== Get Some Data from json file start =============>
+    $.ajax({
+        url:"https://shishirbhuiyan.github.io/json/my.json",
+        type:"GET",
+        success: function(data){
+            $('#aboutTextTwo').text(data.about.textTwo);
+            $('#aboutImageTwo').css("background-image", "url(" + data.about.imageOne + ")");
+            $('.pop-overlay').css("background-image", "url(" + data.about.popImage + ")");
+
+            for(var i=1;i<=data.portfolio.length;i++){
+                $("#portfolio_wrapper .item._"+i+"").addClass(data.portfolio[i-1].type);
+                $("#portfolio_wrapper .item  .image._"+i+"").css({
+                    "background-image": "url(" + data.portfolio[i-1].image + ")",
+                    "height": "100%",
+                    "width": "100%",
+                    "background-size": "cover",
+                    "background-repeat": "no-repeat",
+                });
+                $("#portfolio_wrapper .item  .portfolio-info._"+i+" h4").text(data.portfolio[i-1].text);
+                $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .one").attr("href",data.portfolio[i-1].image);
+                $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .two").attr("href",data.portfolio[i-1].link);
+            }
+        }
+    });
+    //<=========== Get Some Data from json file End =============>
+
+
+
+
     //<===========Animate on Scroll =============>
     AOS.init();
 
@@ -83,11 +113,15 @@ $(document).ready(function() {
     });
   });
 
-});
+
+
+
+
+});//<=========== Jquery End =============>
 
 //<=========== Read More =============>
 function ReadMore() {
-    $(".pop-overlay").toggleClass("openoverlay");
+    document.getElementsByClassName("pop-overlay").toggleClass("openoverlay");
     document.getElementById("popup").classList.toggle("active");
 }
 
