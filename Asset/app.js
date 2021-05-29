@@ -122,7 +122,7 @@ $(document).ready(function() {
 //<=========== Read More =============>
 function ReadMore() {
     $(".pop-overlay").toggleClass("openoverlay");
-    $("#popup").classList.toggle("active");
+    document.getElementById("popup").classList.toggle("active");
 }
 
 
