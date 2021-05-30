@@ -50,7 +50,7 @@
             }
         }
         .portfolio_wrapper{
-            margin-top: 3rem;
+            margin-top: 0rem;
             display: flex;
             flex-wrap: wrap;
             .item{
@@ -194,6 +194,7 @@
                 display: block;
             }
             .portfolio_wrapper{
+                margin-top: 3rem;
                 .item{
                     flex: 0 0 50%;
                     max-width: 50%;
