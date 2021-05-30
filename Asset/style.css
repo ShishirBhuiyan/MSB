@@ -927,6 +927,10 @@ section.about .openoverlay {
   padding: 10px;
 }
 
+.portfolios .portfolio .tabs {
+  display: none;
+}
+
 .portfolios .portfolio .tabs ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1211,6 +1215,9 @@ section.about .openoverlay {
   #popup .right .image {
     background-size: cover !important;
     height: 45vh !important;
+  }
+  .portfolios .portfolio .tabs {
+    display: block;
   }
   .portfolios .portfolio .portfolio_wrapper .item {
     -webkit-box-flex: 0;
