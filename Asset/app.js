@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 
 
-  $('.portfolio_wrapper').isotope({
+/*   $('.portfolio_wrapper').isotope({
     itemSelector: '.item',
     layoutMode: 'fitRows'
   });
@@ -94,7 +94,7 @@ $(document).ready(function() {
     gallery:{
       enabled:true
     }
-  });
+  }); */
 
 });//<=========== Jquery End =============>
 

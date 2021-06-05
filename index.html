@@ -14,9 +14,8 @@
     <link href="./Asset/Plug/magnific-popup.css" rel="stylesheet"  />
 
     <!--========== Require Jquery Link ===========-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./Asset/Plug/jquery.js"></script>
     
-    <script src="./Asset/app.js"></script>
      
     <title>MSB</title>
 </head>
@@ -283,7 +282,7 @@
 
             
             <!--========== Portfolio Start ===========-->
-            <section class="portfolios" id="portfolios">
+<!--             <section class="portfolios" id="portfolios">
                 <div class="heading">
                     <div class="section_heading">
                         <div class="line first"></div>
@@ -355,8 +354,42 @@
                             </div>
                         </div>
                     </div>
-            </section>
+            </section> -->
             <!--========== Portfolio End =============-->
+
+            <section id="ok">
+                <div class="section_heading">
+                    <div class="line first"></div>
+                      <h1>My Works</h1>
+                    <div class="line second"></div>
+                </div>
+                <div class="portfolio-menu">
+                    <ul>
+                        <li class="active" data-filter=".all">All</li>
+                        <li data-filter=".photography">Photography</li>
+                        <li data-filter=".app">App</li>
+                        <li data-filter=".web">Web</li>
+                    </ul>
+                </div>
+                <div class="portfolio-item">
+                    <!--Portfolio Item Start-->
+                    <a href="./Asset/image/2.svg" class="image">
+                        <div class="item all web">
+                            <h1>Web</h1>
+                        </div>
+                    </a>
+                    <!--Portfolio Item End-->
+                    <!--Portfolio Item Start-->
+                    <a href="./Asset/image/2.svg" class="image">
+                        <div class="item all app">
+                            <h1>app</h1>
+                        </div>
+                    </a>
+                    <!--Portfolio Item End-->
+                </div>
+
+            </section>
+
        </main>
     </div>
 
@@ -377,5 +410,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
     <script src="./Asset/Plug/isotope.pkgd.min.js"></script>
     <script src="./Asset/Plug/jquery.magnific-popup.min.js"></script>
+    <script src="./Asset/app.js"></script>
+    <script src="./Asset/ok.js"></script>
 </body>
 </html>
