@@ -44,7 +44,6 @@
                 .portfolio-wrap{
                     width: 100%;
                     height: 100%;
-                    background-color: chartreuse;
                     transition: 0.3s;
                     position: relative;
                     overflow: hidden;
@@ -128,7 +127,7 @@
                         opacity: 1;
                     }
                     &:hover .portfolio-info .portfolio-links i{
-                        transform: translateX(100px);
+                        transform: translateX(50px);
                     }
                       
                     &:hover .portfolio-info::before {

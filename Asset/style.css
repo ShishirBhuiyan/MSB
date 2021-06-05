@@ -975,7 +975,6 @@ section.about .openoverlay {
 #ok .portfolio .portfolio-item .image .item .portfolio-wrap {
   width: 100%;
   height: 100%;
-  background-color: chartreuse;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
@@ -1082,8 +1081,8 @@ section.about .openoverlay {
 }
 
 #ok .portfolio .portfolio-item .image .item .portfolio-wrap:hover .portfolio-info .portfolio-links i {
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
 }
 
 #ok .portfolio .portfolio-item .image .item .portfolio-wrap:hover .portfolio-info::before {

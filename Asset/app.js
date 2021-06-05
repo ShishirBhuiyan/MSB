@@ -9,19 +9,18 @@ $(document).ready(function() {
             $('#aboutImageTwo').css("background-image", "url(" + data.about.imageOne + ")");
             $('.pop-overlay').css("background-image", "url(" + data.about.popImage + ")");
 
-/*             for(var i=1;i<=data.portfolio.length;i++){
-                $("#portfolio_wrapper .item._"+i+"").addClass(data.portfolio[i-1].type);
-                $("#portfolio_wrapper .item  .image._"+i+"").css({
+            for(var i=1;i<=data.portfolio.length;i++){
+                $("#ok .image._"+i+"").attr("href",data.portfolio[i-1].image);
+                $("#ok .item._"+i+"").addClass(data.portfolio[i-1].type);
+                $("#ok .item._"+i+" .portimage").css({
                     "background-image": "url(" + data.portfolio[i-1].image + ")",
                     "height": "100%",
                     "width": "100%",
                     "background-size": "cover",
                     "background-repeat": "no-repeat",
                 });
-                $("#portfolio_wrapper .item  .portfolio-info._"+i+" h4").text(data.portfolio[i-1].text);
-                $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .one").attr("href",data.portfolio[i-1].image);
-                $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .two").attr("href",data.portfolio[i-1].link);
-            } */
+                $("#ok .item._"+i+" h4").text(data.portfolio[i-1].text);
+            }
         }
     });
     //<=========== Get Some Data from json file End =============>
