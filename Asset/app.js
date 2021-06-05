@@ -9,7 +9,7 @@ $(document).ready(function() {
             $('#aboutImageTwo').css("background-image", "url(" + data.about.imageOne + ")");
             $('.pop-overlay').css("background-image", "url(" + data.about.popImage + ")");
 
-            for(var i=1;i<=data.portfolio.length;i++){
+/*             for(var i=1;i<=data.portfolio.length;i++){
                 $("#portfolio_wrapper .item._"+i+"").addClass(data.portfolio[i-1].type);
                 $("#portfolio_wrapper .item  .image._"+i+"").css({
                     "background-image": "url(" + data.portfolio[i-1].image + ")",
@@ -21,7 +21,7 @@ $(document).ready(function() {
                 $("#portfolio_wrapper .item  .portfolio-info._"+i+" h4").text(data.portfolio[i-1].text);
                 $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .one").attr("href",data.portfolio[i-1].image);
                 $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .two").attr("href",data.portfolio[i-1].link);
-            }
+            } */
         }
     });
     //<=========== Get Some Data from json file End =============>
