@@ -959,7 +959,25 @@ section.about .openoverlay {
   border: 2px solid var(--black);
 }
 
+<<<<<<< HEAD
 #ok .portfolio .portfolio-item .item {
+=======
+#ok .portfolio .portfolio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#ok .portfolio .portfolio-item .item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+>>>>>>> 7be8ed41295d21446116d403585204ac8479ccab
   height: 250px;
   margin-bottom: 10px;
   width: 100%;
