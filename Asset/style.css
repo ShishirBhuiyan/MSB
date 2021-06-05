@@ -928,10 +928,6 @@ section.about .openoverlay {
   padding: 10px;
 }
 
-.portfolios .portfolio .tabs {
-  display: none;
-}
-
 .portfolios .portfolio .tabs ul {
   display: -webkit-box;
   display: -ms-flexbox;
