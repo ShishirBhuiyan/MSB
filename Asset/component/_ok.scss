@@ -35,6 +35,7 @@
         }
         .portfolio-item{
             display: flex;
+            flex-direction: column;
           .item{
             flex: 0 0 100%;
             max-width: 100%;
