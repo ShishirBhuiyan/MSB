@@ -1,27 +1,31 @@
 #ok{
-    .portfolio-menu{
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            li{
-                cursor: pointer;
-                margin-bottom: 5px;
+    .portfolio{
+        margin-top: 30px;
+        padding: 10px;
+        .portfolio-menu{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                li{
+                    cursor: pointer;
+                    margin-bottom: 5px;
+                }
             }
         }
-    }
-    .portfolio-item{
-      .image{
-        width: 100%;
-        height: 100px;
-        margin-bottom: 10px;
-        .item{
-          width: 100%;
-          height: 100px;
-          border: 1px solid red;
-          background-color: blanchedalmond;
+        .portfolio-item{
+          .image{
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            .item{
+              width: 100%;
+              height: 100px;
+              border: 1px solid red;
+              background-color: blanchedalmond;
+            }
+          }
         }
-      }
     }
 }
