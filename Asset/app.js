@@ -73,27 +73,27 @@ $(document).ready(function() {
 
 
 
-/*   $('.portfolio_wrapper').isotope({
-    itemSelector: '.item',
-    layoutMode: 'fitRows'
-  });
-  $('.tabs ul li').click(function(){
-     $('.tabs ul li').removeClass('active');
-     $(this).addClass('active');
+    $('.portfolio-item').isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+    });
+    $('.portfolio-menu ul li').click(function(){
+        $('.portfolio-menu ul li').removeClass('active');
+        $(this).addClass('active');
 
-     var selector = $(this).attr('data-filter');
-     $('.portfolio_wrapper').isotope({
+        var selector = $(this).attr('data-filter');
+        $('.portfolio-item').isotope({
         filter:selector
-     });
-     return false;
-  });
+        });
+        return false;
+    });
 
-  $('.venobox').magnificPopup({
-    type: 'image',
-    gallery:{
-      enabled:true
-    }
-  }); */
+    $('.image').magnificPopup({
+        type: 'image',
+        gallery:{
+            enabled:true
+        }
+    }); 
 
 });//<=========== Jquery End =============>
 

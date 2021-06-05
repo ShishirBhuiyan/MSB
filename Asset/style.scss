@@ -19,7 +19,7 @@
    @include sm_profile();
    @include sm-about();
    @include sm-read-more();
-  // @include sm-portfolio();
+  @include sm-portfolio();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md
@@ -28,7 +28,7 @@
    @include md-nav();
    @include md-read-more();
    @include md-about();
-  //@include md-portfolio();
+  @include md-portfolio();
 }
 
 @media screen and(min-width: 992px){ //  --breakpoint-lg
@@ -39,7 +39,7 @@
    @include lg_about();
    @include lg-read-more();
    @include lg-experence();
-   //@include lg-portfolio();
+   @include lg-portfolio();
 }
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
