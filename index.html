@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="Asset/Plug/headline.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./Asset/Plug/magnific-popup.css" />
+
+    <link href="./Asset/Plug/magnific-popup.css" rel="stylesheet"  />
 
     <!--========== Require Jquery Link ===========-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -291,41 +292,66 @@
                 <div class="portfolio">
                     <div class="tabs">
                        <ul id="portfolio-flters">
-                          <li class="active"data-filter=".all">
+                          <li class="active"data-filter="*">
                              <a >All</a>
                           </li>
              
-                          <li data-filter=".photography">
-                             <a >Photography</a>
+                          <li data-filter=".web">
+                             <a >web</a>
                           </li>
              
-                          <li data-filter=".wordpress">
-                             <a>Wordpress</a>
+                          <li data-filter=".app">
+                             <a>App</a>
                           </li>
              
-                          <li data-filter=".web-design">
-                             <a>Web</a>
+                          <li data-filter=".ui">
+                             <a>Ui</a>
                           </li>
                        </ul>
                     </div>
-                    <div class="portfolio-item">
-                        <!--Portfolio Item Start-->
-                        <a href="https://i.postimg.cc/K8s36FLz/Portfolio-Two.png" class="image">
-                            <div class="item all web-design padd-15">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                   <!--  <img src="./Asset/image/2.svg" /> -->
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <h4>Webdesign</h4>
-                                        <div class="icon">
-                                            <i class="fa fa-search"></i>
+
+                    <div id="portfolio_wrapper" class="portfolio_wrapper">
+                        <div class="item item _1">
+                            <div class="portfolio-wrap">
+                                <div class="image _1 portimage"></div>
+                                <div class="portfolio-info _1">
+                                        <h4></h4>
+                                        <div class="portfolio-links">
+                                        <a href="" 
+                                         data-gall="portfolioGallery" class="venobox one" ><i class="fas fa-plus"></i></a>
+                                        <a href="" class="two" target="_blank"
+                                        ><i class="fas fa-link"></i></a>
                                         </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item item _2">
+                            <div class="portfolio-wrap">
+                                <div class="image _2 portimage"></div>
+                                <div class="portfolio-info  _2">
+                                    <h4></h4>
+                                    <div class="portfolio-links">
+                                        <a href=""  data-gall="portfolioGallery" class="venobox one" ><i class="fas fa-plus"></i></a>
+
+                                        <a href="" class="two" target="_blank" ><i class="fas fa-link"></i></a>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <!--Portfolio Item End-->
+                        </div>
+                        <div class="item item _3">
+                            <div class="portfolio-wrap">
+                                <div class="image _3 portimage"></div>
+                                <div class="portfolio-info _3">
+                                        <h4></h4>
+                                        <div class="portfolio-links">
+                                        <a href="" 
+                                         data-gall="portfolioGallery" class="venobox one" ><i class="fas fa-plus"></i></a>
+                                        <a href="" class="two" target="_blank"
+                                        ><i class="fas fa-link"></i></a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
             </section>
             <!--========== Portfolio End =============-->
@@ -349,7 +375,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
     <script src="./Asset/Plug/isotope.pkgd.min.js"></script>
     <script src="./Asset/Plug/jquery.magnific-popup.min.js"></script>
-    <script src="Asset/app.js"></script>
+    <script src="./Asset/app.js"></script>
 
 
 

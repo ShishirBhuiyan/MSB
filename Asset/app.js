@@ -73,81 +73,23 @@ $(document).ready(function() {
     });
 
 
-   //Image Filter-----------------
-   
 
-
-/*    let links = document.querySelectorAll('.tabs li');
-
-   links.forEach(link =>{
-      let selector = link.dataset.filter;
-      link.addEventListener('click', function(e){
-          e.preventDefault();
-          wrappers.isotope({
-            filter : selector,
-            layoutMode : 'masonry',
-            animationOptions : {
-               duration : 750,
-               easing : 'linear'
-            }
-         });
-      });
-   }); */
-/*    $('.portfolio-item').isotope({
-    filter : "*",
-    layoutMode : 'masonry',
-    animationOptions : {
-       duration : 750,
-       easing : 'linear'
-    }
- });
-
-   $('.tabs ul li').on('click', function() {
-        $(".tabs ul li").removeClass('active');
-        $(this).addClass('active');
-
-        var selector = $(this).attr('data-filter');
-        $('.portfolio_wrapper').isotope({
-        filter:selector
-        });
-        return false;
-  });
-
-
-  $('.venobox').magnificPopup({
-    type: 'image',
-    gallery:{
-      enabled:true
-    }
-  }); */
-
-/*   $('.venobox').venobox({
-    'share': false,
-  }); */
-
-
-
-  $('.portfolio-item').isotope({
+  $('.portfolio_wrapper').isotope({
     itemSelector: '.item',
     layoutMode: 'fitRows'
   });
-
   $('.tabs ul li').click(function(){
      $('.tabs ul li').removeClass('active');
      $(this).addClass('active');
 
      var selector = $(this).attr('data-filter');
-     $('.portfolio-item').isotope({
+     $('.portfolio_wrapper').isotope({
         filter:selector
      });
      return false;
   });
 
-
-
-
-
-  $('.image').magnificPopup({
+  $('.venobox').magnificPopup({
     type: 'image',
     gallery:{
       enabled:true
