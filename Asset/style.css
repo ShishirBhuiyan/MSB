@@ -1155,7 +1155,28 @@ section.about .openoverlay {
 
 #ok .portfolio .portfolio-menu ul li {
   cursor: pointer;
-  margin-bottom: 5px;
+  display: inline-block;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: capitalize;
+  color: var(--white);
+  margin: 0 3px 10px 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+#ok .portfolio .portfolio-menu ul li a {
+  color: var(--black);
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+#ok .portfolio .portfolio-menu ul li.active {
+  background: var(--pink);
+  border: 2px solid var(--black);
 }
 
 #ok .portfolio .portfolio-item .image {
