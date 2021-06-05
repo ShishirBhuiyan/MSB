@@ -74,18 +74,10 @@ $(document).ready(function() {
 
 
    //Image Filter-----------------
-   var wrappers = $('.portfolio_wrapper');
    
-   wrappers.isotope({
-      filter : "*",
-      layoutMode : 'masonry',
-      animationOptions : {
-         duration : 750,
-         easing : 'linear'
-      }
-   });
 
-   let links = document.querySelectorAll('.tabs li');
+
+/*    let links = document.querySelectorAll('.tabs li');
 
    links.forEach(link =>{
       let selector = link.dataset.filter;
@@ -100,21 +92,38 @@ $(document).ready(function() {
             }
          });
       });
-   });
+   }); */
+   $('.portfolio_wrapper').isotope({
+    filter : "*",
+    layoutMode : 'masonry',
+    animationOptions : {
+       duration : 750,
+       easing : 'linear'
+    }
+ });
 
-   $('.tabs li').on('click', function() {
-    $(".tabs li").removeClass('active');
-    $(this).addClass('active');
+   $('.tabs ul li').on('click', function() {
+        $(".tabs ul li").removeClass('active');
+        $(this).addClass('active');
+
+        var selector = $(this).attr('data-filter');
+        $('.portfolio_wrapper').isotope({
+        filter:selector
+        });
+        return false;
   });
 
-  $(document).ready(function() {
-    $('.venobox').venobox({
-      'share': false
-    });
+
+/*   $('.venobox').magnificPopup({
+    type: 'image',
+    gallery:{
+      enabled:true
+    }
+  }); */
+
+  $('.venobox').venobox({
+    'share': false,
   });
-
-
-
 
 
 });//<=========== Jquery End =============>
