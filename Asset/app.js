@@ -114,16 +114,16 @@ $(document).ready(function() {
   });
 
 
-/*   $('.venobox').magnificPopup({
+  $('.venobox').magnificPopup({
     type: 'image',
     gallery:{
       enabled:true
     }
-  }); */
-
-  $('.venobox').venobox({
-    'share': false,
   });
+
+/*   $('.venobox').venobox({
+    'share': false,
+  }); */
 
 
 });//<=========== Jquery End =============>
