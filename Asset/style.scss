@@ -8,7 +8,7 @@
 @import './component/about';
 @import './component/read_more';
 @import './component/experience';
-@import './component/portfolio';
+//@import './component/portfolio';
 @import './component/ok';
 
 
@@ -19,7 +19,7 @@
    @include sm_profile();
    @include sm-about();
    @include sm-read-more();
-   @include sm-portfolio();
+   //@include sm-portfolio();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md

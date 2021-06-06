@@ -15,15 +15,6 @@ $(document).ready(function(){
      });
      return false;
   });
-/* 
-  $('.image').magnificPopup({
-    type: 'image',
-    gallery:{
-      enabled:true
-    }
-  });  */
- 
-  
  
  });//________$(document).ready(function(){}) Part End
  
