@@ -15,8 +15,8 @@ $(document).ready(function(){
      });
      return false;
   });
-
-/*   $('.image').magnificPopup({
+/* 
+  $('.image').magnificPopup({
     type: 'image',
     gallery:{
       enabled:true

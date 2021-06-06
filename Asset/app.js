@@ -10,17 +10,20 @@ $(document).ready(function() {
             $('.pop-overlay').css("background-image", "url(" + data.about.popImage + ")");
 
             for(var i=1;i<=data.portfolio.length;i++){
-                $("#portfolio_wrapper .item._"+i+"").addClass(data.portfolio[i-1].type);
-                $("#portfolio_wrapper .item  .image._"+i+"").css({
+                $("#portfolio_wrapper .image._"+i+"").attr("href",data.portfolio[i-1].link);
+                $("#portfolio_wrapper .image._"+i+" .item").addClass(data.portfolio[i-1].type);
+                $("#portfolio_wrapper .image._"+i+" .portfolio-wrap").css({
                     "background-image": "url(" + data.portfolio[i-1].image + ")",
                     "height": "100%",
                     "width": "100%",
                     "background-size": "cover",
                     "background-repeat": "no-repeat",
+                    "transition": "0.3s",
+                    "position": "relative",
+                    "overflow": "hidden",
+                    "border": "5px solid #555555"
                 });
-                $("#portfolio_wrapper .item  .portfolio-info._"+i+" h4").text(data.portfolio[i-1].text);
-                $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .one").attr("href",data.portfolio[i-1].image);
-                $("#portfolio_wrapper .item  .portfolio-info._"+i+" .portfolio-links .two").attr("href",data.portfolio[i-1].link);
+                $("#portfolio_wrapper  .image._"+i+" .portfolio-info h4").text(data.portfolio[i-1].text);
             }
         }
     });
@@ -74,27 +77,6 @@ $(document).ready(function() {
 
 
 
-/*   $('.portfolio_wrapper').isotope({
-    itemSelector: '.item',
-    layoutMode: 'fitRows'
-  });
-  $('.tabs ul li').click(function(){
-     $('.tabs ul li').removeClass('active');
-     $(this).addClass('active');
-
-     var selector = $(this).attr('data-filter');
-     $('.portfolio_wrapper').isotope({
-        filter:selector
-     });
-     return false;
-  });
-
-  $('.venobox').magnificPopup({
-    type: 'image',
-    gallery:{
-      enabled:true
-    }
-  }); */
 
 });//<=========== Jquery End =============>
 

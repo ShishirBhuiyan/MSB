@@ -1,4 +1,4 @@
-#ok{
+#portfolio_wrapper{
     .portfolio{
         margin-top: 30px;
         padding: 10px;
@@ -38,15 +38,8 @@
             .item{
               width: 100%;
               height: 250px;
-              border: 1px solid red;
               padding: 10px 5px;
                 .portfolio-wrap{
-                  width: 100%;
-                  height: 100%;
-                  transition: 0.3s;
-                  position: relative;
-                  overflow: hidden;
-                  background-color: blanchedalmond;
                     &::before{
                         content: "";
                         background: var(--black);
