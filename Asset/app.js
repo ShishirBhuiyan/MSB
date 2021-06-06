@@ -104,7 +104,7 @@ tooltips.forEach((o) => {
 }
 var footerSection = document.querySelector("footer"),
 options = {
-rootMargin: "0px 0px 200px 0px"
+rootMargin: "0px 0px 650px 0px"
 };
 const sectionObserver = new IntersectionObserver(function(o) {
 runprogress();
