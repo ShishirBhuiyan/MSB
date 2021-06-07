@@ -8,18 +8,17 @@
 @import './component/about';
 @import './component/read_more';
 @import './component/experience';
-//@import './component/portfolio';
-@import './component/ok';
-
-
+@import './component/portfolio';
 @import './component/footer';
+
+
+
 /* Media Query Start */
 @media screen and(min-width:576px){ // --breakpoint-sm
    @include sm_container();
    @include sm_profile();
    @include sm-about();
    @include sm-read-more();
-   //@include sm-portfolio();
 }
 
 @media screen and(min-width: 768px){ // --breakpoint-md
